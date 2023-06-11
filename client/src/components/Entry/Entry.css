@@ -1,0 +1,143 @@
+:root{
+  --entry-color:gold ;
+  --error-color: rgba(255, 69, 69, 0.829);
+  --toastify-color-error: rgba(255, 69, 69, 0.829);
+}
+
+.Toastify__toast-container {
+  width: 350px!important;
+}
+
+@media (max-width: 480px ){
+  .Toastify__toast-container {
+    width: 350px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 400px){
+  .Toastify__toast-container {
+    max-width: 93%!important;
+    top: 20px;
+    left: 3.5%;
+    transform: translateX(0);
+  }
+}
+
+.Toastify__toast {
+  border-radius: 10px;
+  background-color: #0000008f;
+}
+
+.Toastify__toast-body {
+  padding: 20px 10px;
+
+}
+
+.entry-wrapper{
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 25px;
+}
+
+.entry-wrapper h1{
+  font-size: 90px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #eee;
+}
+
+.entry-wrapper .title h1 span{
+  color: var(--entry-color);
+  letter-spacing: 2px;
+}
+.entry-wrapper .title p{
+  font-size: 18px;
+  color: #ddd;
+  text-align: center;
+  margin-top: -25px;
+}
+
+.entry-wrapper .entry-content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.input-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.input-wrapper p{
+  color: #eee;
+  font-size: 14px;
+  color: var(--error-color);
+  letter-spacing: 1px;
+}
+
+.entry-wrapper .entry-content input{
+  padding: 20px;
+  border: 2px solid #eee!important;
+  background-color: transparent;
+  color: #eee;
+  outline: none;
+  font-size: 20px;
+  border-radius: 10px;
+  height: 65px;
+}
+.entry-wrapper .entry-content input::placeholder{
+  color: #eee;
+}
+.entry-wrapper .entry-content input:focus{
+  border: 2px solid var(--entry-color)!important;
+}
+
+.entry-content .join-game{
+  display: flex;
+  gap: 10px;
+}
+
+.entry-content .join-game .input-wrapper{
+  width: 70%;
+}
+
+.entry-content .join-game button{
+  width: 30%;
+  background-color: var(--entry-color);
+}
+
+.entry-content span{
+  width: 100%;
+  text-align: center;
+  color: #eee;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.entry-content button{
+  padding: 20px;
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .3s;
+  height: 65px;
+  font-weight: 700;
+}
