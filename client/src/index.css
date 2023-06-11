@@ -6,11 +6,9 @@ html{
 
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Rajdhani', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #111;
 }
 
 *{
