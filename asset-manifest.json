@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/xonline/static/css/main.ddc58045.css",
+    "main.js": "/xonline/static/js/main.a77b06a1.js",
+    "index.html": "/xonline/index.html",
+    "main.ddc58045.css.map": "/xonline/static/css/main.ddc58045.css.map",
+    "main.a77b06a1.js.map": "/xonline/static/js/main.a77b06a1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddc58045.css",
+    "static/js/main.a77b06a1.js"
+  ]
+}
