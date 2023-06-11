@@ -93,9 +93,9 @@ export default function Entry() {
 
   const generateGameid = () => {
     let gameid = ''
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    const characters = 'abcdefghijklmnopqrstuvwxyz0123456789'
     const charactersLength = characters.length
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 4; i++) {
       gameid += characters.charAt(Math.floor(Math.random() * charactersLength))
     }
     return gameid
@@ -145,7 +145,7 @@ export default function Entry() {
               placeholder="Enter game code" 
               value={gameid} 
               onChange={handleGameid}
-              maxLength={5}
+              maxLength={4}
             />
             {gameidError && <p>Game code is required</p>}
             </div>

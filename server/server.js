@@ -11,8 +11,7 @@ const io = new Server(server, {
   cors: {
     origin: '*',
   },
-  pingTimeout: 10000,    // 5 seconds
-  pingInterval: 20000   // 10 seconds
+  pingTimeout: 60 * 1000,    // 1 minute
 });
 
 const games = [];
