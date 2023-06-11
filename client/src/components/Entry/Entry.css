@@ -11,7 +11,7 @@
 @media (max-width: 480px ){
   .Toastify__toast-container {
     width: 350px;
-    top: 20px;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -19,8 +19,8 @@
 
 @media (max-width: 400px){
   .Toastify__toast-container {
-    max-width: 93%!important;
-    top: 20px;
+    width: 93%!important;
+    top: 10px;
     left: 3.5%;
     transform: translateX(0);
   }
@@ -28,7 +28,7 @@
 
 .Toastify__toast {
   border-radius: 10px;
-  background-color: #0000008f;
+  background-color: #000;
 }
 
 .Toastify__toast-body {
@@ -140,4 +140,22 @@
   transition: .3s;
   height: 65px;
   font-weight: 700;
+}
+
+.connecting{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 120;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.7);
 }

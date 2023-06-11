@@ -3,19 +3,20 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  padding: 0 10px;
 }
 
 .wrapper .names{
   display: flex;
   justify-content: space-between;
   position: relative;
+  gap: 30px;
+  width: 100%;
 }
 
 .wrapper hr{
-  margin: 10px 0 20px;
+  margin: 10px 0 0;
   border: none;
-  border-bottom: 2px solid #eeeeeea8;
+  border-bottom: 1px solid #999;
   width: 100%;
 }
 
@@ -27,12 +28,13 @@
 }
 
 .wrapper .names h1{
-  font-size: 35px;
+  font-size: 25px;
   font-weight: 700;
   color: #eee;
   text-transform: uppercase;
   text-align: center;
   color: gold;
+  word-wrap: break-word;
 }
 
 .wrapper .names h1 span{
@@ -43,7 +45,8 @@
 .wrapper h3{
   text-align: center;
   margin-bottom: 20px;
-  font-size: 40px;
+  margin-top: 20px;
+  font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 700;
@@ -99,22 +102,28 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
-  gap: 5px;
+  border-radius: 5px;
+  padding: 20px 0;
 }
 
 
 .wrapper .options .option{
   background-color: transparent;
-  border-radius: 5px;
   border: none;
   outline: none;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   color: gold;
   cursor: pointer;
-  font-style: italic;
+  transition: 0.5s;
+  width: calc(100% / 3);
+  padding: 5px 5px;
 }
+.wrapper .options .option:not(:last-child){
+  border-right: 1px solid #999;
+}
+
+
 
 .wrapper .options .option:hover{
   text-decoration: underline;

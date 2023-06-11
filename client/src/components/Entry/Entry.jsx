@@ -18,6 +18,29 @@ export default function Entry() {
   const [showWaiting, setShowWaiting] = useState(false)
   const [showBoard, setShowBoard] = useState(false)
   const [game, setGame] = useState({})
+  const [connecting, setConnecting] = useState(true);
+
+  useEffect(() => {
+    socket.on('connect', () => {
+      setConnecting(false);
+    });
+
+    return () => {
+      socket.off('connect');
+    };
+  }, []);
+
+  useEffect(() => {
+    socket.on('disconnect', () => {
+      setShowBoard(false)
+      setShowWaiting(false)
+    });
+
+    return () => {
+      socket.off('disconnect');
+    };
+  }, []);
+
 
 
   useEffect(() => {
@@ -112,7 +135,7 @@ export default function Entry() {
             <input type="text" 
               placeholder='Enter your name' 
               value={name} onChange={handleName} 
-              maxLength={10}
+              maxLength={7}
             />
             {nameError && <p>Your name is required for the game</p>}
           </div>
@@ -135,6 +158,15 @@ export default function Entry() {
       {showWaiting && <Waiting newGameid={newGameid} /> }
       {showBoard && <Board game={game} setGame={setGame} socket={socket} />}
       <ToastContainer limit={1} />
+      {connecting &&
+      <div className="connecting">
+        <h1>Connecting...</h1>
+        <div className="load">
+          <div className="one"></div>
+          <div className="two"></div>
+          <div className="three"></div>
+        </div>
+      </div>}
     </>
   )
 }

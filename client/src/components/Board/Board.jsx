@@ -205,8 +205,15 @@ export default function Board(props) {
         { playerTwo && <h1>{playerTwo.name} <br /><span>{ playerTwo.score }</span></h1> }
       </div>
       <hr />
+      
       { !announcement && <h3>{ turn.includes(getcurrentPlayerName()) ? `Your Turn ${turn.slice(-3)}` : turn }</h3>}
       { announcement && <h3>{ announcement }</h3> }
+      <hr />
+      <div className='options'>
+        <button className="option" onClick={resetScore}>Reset score</button>
+        <button className="option" onClick={resetGame}>Play again</button>
+        <button className="option" onClick={leaveGame}>Leave game</button>
+      </div>
       <div className="container">
         { renderCell(0) }
         { renderCell(1) }
@@ -217,11 +224,6 @@ export default function Board(props) {
         { renderCell(6) }
         { renderCell(7) }
         { renderCell(8) }
-      </div>
-      <div className='options'>
-        <button className="option" onClick={resetScore}>Reset score</button>
-        <button className="option" onClick={resetGame}>Play again</button>
-        <button className="option" onClick={leaveGame}>Leave game</button>
       </div>
   </div>
   )
