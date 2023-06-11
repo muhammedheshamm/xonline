@@ -6,7 +6,7 @@ import io from 'socket.io-client';
 import Waiting from '../Waiting/Waiting';
 import Board from '../Board/Board';
 
-const socket = io('https://xonline-v2w4.onrender.com');
+const socket = io('https://xonline-api-26dy.onrender.com');
 
 export default function Entry() {
 
