@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
-:root {
-  --doc-height: 100%;
+:root{
+  --doc-height: 100vh;
 }
+
 
 html{
   background-color: #111!important;
-  height: 100vh; /* fallback for Js load */
   height: var(--doc-height);
 }
 
@@ -15,7 +15,6 @@ body {
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Rajdhani', sans-serif;
-  height: 100vh; /* fallback for Js load */
   height: var(--doc-height);
 }
 
@@ -23,7 +22,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: var(--doc-height);
 }
 
 *{
