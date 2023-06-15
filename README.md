@@ -1,4 +1,4 @@
-# xonline
+# XOnline
  XOnline is a real-time XO project designed to enable two players to engage in an interactive game of XO (also known as Tic-Tac-Toe) online. The project is built using a combination of React.js, Node.js, Express.js, and Socket.IO.
 
 
